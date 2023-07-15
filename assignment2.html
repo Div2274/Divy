@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 100px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .rating label {
+      font-weight: bold;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 25px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .stars input:checked ~ label,
+    .stars input:checked ~ label ~ label {
+      color: #ffca08;
+    }
+
+    .comment {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .input-group input[type="number"] {
+      width: 70px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #ffca08;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #f7b500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teacher Feedback Form</h1>
+
+    <form>
+      <div class="rating">
+        <label>Knowledge:</label>
+        <div class="stars">
+          <input type="radio" id="knowledge5" name="knowledge" value="1">
+          <label for="knowledge5">&#9733;</label>
+          <input type="radio" id="knowledge4" name="knowledge" value="2">
+          <label for="knowledge4">&#9733;</label>
+          <input type="radio" id="knowledge3" name="knowledge" value="3">
+          <label for="knowledge3">&#9733;</label>
+          <input type="radio" id="knowledge2" name="knowledge" value="4">
+          <label for="knowledge2">&#9733;</label>
+          <input type="radio" id="knowledge1" name="knowledge" value="5">
+          <label for="knowledge1">&#9733;</label>
+        </div>
+      </div>
+
+      <div class="rating">
+        <label>Teaching Style:</label>
+        <div class="stars">
+          <input type="radio" id="teaching5" name="teaching" value="1">
+          <label for="teaching5">&#9733;</label>
+          <input type="radio" id="teaching4" name="teaching" value="2">
+          <label for="teaching4">&#9733;</label>
+          <input type="radio" id="teaching3" name="teaching" value="3">
+          <label for="teaching3">&#9733;</label>
+          <input type="radio" id="teaching2" name="teaching" value="4">
+          <label for="teaching2">&#9733;</label>
+          <input type="radio" id="teaching1" name="teaching" value="5">
+          <label for="teaching1">&#9733;</label>
+        </div>
+      </div>
+
+      <div class="rating">
+        <label>Communication:</label>
+        <div class="stars">
+          <input type="radio" id="communication5" name="communication" value="1">
+          <label for="communication5">&#9733;</label>
+          <input type="radio" id="communication4" name="communication" value="2">
+          <label for="communication4">&#9733;</label>
+          <input type="radio" id="communication3" name="communication" value="3">
+          <label for="communication3">&#9733;</label>
+          <input type="radio" id="communication2" name="communication" value="4">
+          <label for="communication2">&#9733;</label>
+          <input type="radio" id="communication1" name="communication" value="5">
+          <label for="communication1">&#9733;</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea class="comment" id="comments" name="comments" rows="4"></textarea>
+      </div>
+
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
